@@ -1,3 +1,13 @@
-.todos-comp > h1 {
+/* .todos-comp > h1 {
     text-align: center;
+} */
+
+ul > {
+    list-style-type: none;
+    padding-left: 0; 
+    
+}
+
+li {
+    list-style: none;
 }

@@ -1,0 +1,39 @@
+label {
+    margin: 0;
+}
+
+/* hr {
+    margin: 0;
+} */
+
+.todo-comp { 
+    text-align: left;
+}
+
+.todo-comp .todo {
+    border-bottom: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+/* .todo-comp .todo > .btn {
+    border: none;
+} */
+
+.delete-todo {
+    color: red;
+    /* border: none; */
+    display: none;
+}
+
+.delete-todo:hover {
+    /* color: red; */
+    font-weight: bold;
+    cursor: pointer;
+    /* background-color: white; */
+}
+
+.show-del-button {
+    display: inline-block;
+}
