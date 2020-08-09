@@ -26,6 +26,10 @@ const Todos = () => {
         }));
     }
 
+    const deleteItem = todoId => {
+        setTodoList(todoList.filter(({ id }) => id !== todoId));
+    }
+
     const applyFilter = (value) => {
         setSelectedButton(value);
     }
@@ -38,8 +42,7 @@ const Todos = () => {
         return selectedButton === 2 ? !todo.isCompleted : todo.isCompleted;
     })
 
-    console.log(todoList)
-    const displayList = filteredList.map((todo => <Todo key={todo.id} todo={todo} updateTodoStatus={(isCompleted) => updateTodoStatus(todo.id, isCompleted)}/>))
+    const displayList = filteredList.map((todo => <Todo key={todo.id} todo={todo} updateTodoStatus={updateTodoStatus} deleteItem={deleteItem}/>))
     const numberOfItemsLeft = todoList.filter(todo => !todo.isCompleted).length;
 
     return (

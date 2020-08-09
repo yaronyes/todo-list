@@ -4,7 +4,7 @@ import './Todo.css'
 import { Row, Col } from 'react-bootstrap';
 
 const Todo = props  => {
-    const { todo, updateTodoStatus } = props;
+    const { todo, updateTodoStatus, deleteItem } = props;
     const [showDeleteBtn, setShowDeleteBtn] = useState("");
     const [completed, setCompleted] = useState(todo.isCompleted);
     
@@ -15,7 +15,7 @@ const Todo = props  => {
     const changeStatus = e => {
         setCompleted(e.target.checked);        
         
-        updateTodoStatus(e.target.checked);
+        updateTodoStatus(todo.id, e.target.checked);
     }
 
     return (
@@ -29,7 +29,7 @@ const Todo = props  => {
                     </div>
                     
                     {/* <Button variant="outline-danger" className="delete-todo" size="sm">x</Button>                                             */}
-                    <span className={"delete-todo " + showDeleteBtn}>x</span>
+                    <span className={"delete-todo " + showDeleteBtn} onClick={() => deleteItem(todo.id)}>x</span>
                 </Col>
             </Row>
             
