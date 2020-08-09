@@ -1,13 +1,4 @@
-/* .todos-comp > h1 {
-    text-align: center;
-} */
-
-ul > {
-    list-style-type: none;
-    padding-left: 0; 
-    
-}
-
-li {
-    list-style: none;
+#todo-item {
+    display: inline-block;
+    margin-right: 5px;
 }

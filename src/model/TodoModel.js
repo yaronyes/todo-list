@@ -1,6 +1,6 @@
 export default class TodoModel {
-    constructor(text) {
+    constructor(text, isCompleted = false) {
         this.text = text;
-        this.isCompleted = false;
+        this.isCompleted = isCompleted;
     }
 }

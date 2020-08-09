@@ -1,20 +1,31 @@
 import React, {useState} from 'react';
 import TodoModel from '../model/TodoModel';
-import { Row, Col, Toast } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import './Todos.css'
 import Todo from './Todo';
 
 const Todos = () => {
-    const [value, setValue] = useState("");
+    const [value, setValue] = useState("");    
     const [todoList, setTodoList] = useState([]);
     
     const addTodo = (event) => {                
         if(event.keyCode === 13) {
             setTodoList([...todoList, new TodoModel(value)]);
+            setValue("");
         }
     }
+
+    const updateTodoStatus = (index, status) => {
+        setTodoList(todoList.map((todo, i) => {
+            if(i === index) {
+                return new TodoModel(todo.text, status);
+            } else {
+                return todo;
+            }
+        }));
+    }
     
-    const displayList = todoList.map((todo => todo.text))
+    const displayList = todoList.map(((todo, index) => <Todo key={index} todo={todo} updateTodoStatus={(status) => updateTodoStatus(index, status)}/>))
 
     return (
         <div className="todos-comp">
@@ -25,10 +36,8 @@ const Todos = () => {
                 </Col>
             </Row>            
             <Row>
-                <Col lg={5}>
-                    {/* {displayList} */}
-                    <Todo />
- 
+                <Col md={5}>
+                    {displayList}                     
                 </Col>
             </Row>            
         </div>
