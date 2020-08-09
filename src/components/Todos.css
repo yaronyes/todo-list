@@ -11,3 +11,8 @@
 /* .todos-comp .show-footer {
     display: block;
 } */
+
+.filters-area > .btn {
+    border: none;
+    color: black;
+}

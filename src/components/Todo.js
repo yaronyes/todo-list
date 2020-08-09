@@ -25,7 +25,7 @@ const Todo = props  => {
                     <div>
                         <input type="checkbox" id="todo-item" checked={completed} onChange={e => changeStatus(e)}/> 
                         {/* <label className={completed ? "completed-todo" : ""} htmlFor="todo-item">{todo.text}</label> */}
-                        <span className={completed ? "completed-todo" : ""}>{todo.text}</span>
+                        <span className={completed ? "todo-text completed-todo" : "todo-text"}>{todo.text}</span>
                     </div>
                     
                     {/* <Button variant="outline-danger" className="delete-todo" size="sm">x</Button>                                             */}
