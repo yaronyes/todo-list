@@ -3,6 +3,15 @@ import React, {useState} from 'react';
 import './Todo.css'
 import { Row, Col, Modal, Button } from 'react-bootstrap';
 
+// component for drawing todo item
+// Props:
+// todo - TodoModel class - the object to show
+// updateTodoStatus - callback function for changing the todo item isCompleted status (e.g: updateTodoStatus(todoId, isCompleted))
+// deleteItem - callback function for deleting the current item (e.g: deleteItem(todoId))
+// State:
+// showDeleteBtn - string - represent className for showing the delete button on mouse over
+// completed - boolean - if the item completed or not
+// show - boolean - show or hide the delete confirmation model dialog
 const Todo = props  => {
     const { todo, updateTodoStatus, deleteItem } = props;
     const [showDeleteBtn, setShowDeleteBtn] = useState("");

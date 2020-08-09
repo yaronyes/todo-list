@@ -4,6 +4,11 @@ import { Row, Col, ToggleButtonGroup, ToggleButton } from 'react-bootstrap';
 import './Todos.css'
 import Todo from './Todo';
 
+// This component draws the input, filtering buttons and the todo list.
+// State:
+// value - string - the value of the input text
+// todoList - list of TodoModel class.
+// selectedButton - number - the selected filter button index
 const Todos = () => {
     const [value, setValue] = useState("");    
     const [todoList, setTodoList] = useState([]);
