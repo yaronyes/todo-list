@@ -26,6 +26,7 @@ const Todos = () => {
     }
     
     const displayList = todoList.map(((todo, index) => <Todo key={index} todo={todo} updateTodoStatus={(status) => updateTodoStatus(index, status)}/>))
+    const numberOfItemsLeft = todoList.filter(todo => !todo.isCompleted).length;
 
     return (
         <div className="todos-comp">
@@ -38,8 +39,13 @@ const Todos = () => {
             <Row>
                 <Col md={5}>
                     {displayList}                     
-                </Col>
+                </Col>                
             </Row>            
+            <Row>
+                <Col>
+                    <p>{numberOfItemsLeft} items left</p>
+                </Col>
+            </Row>
         </div>
     );
 }

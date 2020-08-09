@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import TodoModel from '../model/TodoModel';
+// import TodoModel from '../model/TodoModel';
 import './Todo.css'
 import { Row, Col } from 'react-bootstrap';
 
@@ -24,7 +24,8 @@ const Todo = props  => {
                 <Col className="todo">
                     <div>
                         <input type="checkbox" id="todo-item" checked={completed} onChange={e => changeStatus(e)}/> 
-                        <label htmlFor="todo-item">{todo.text}</label>
+                        {/* <label className={completed ? "completed-todo" : ""} htmlFor="todo-item">{todo.text}</label> */}
+                        <span className={completed ? "completed-todo" : ""}>{todo.text}</span>
                     </div>
                     
                     {/* <Button variant="outline-danger" className="delete-todo" size="sm">x</Button>                                             */}

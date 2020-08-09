@@ -37,3 +37,8 @@ label {
 .show-del-button {
     display: inline-block;
 }
+
+.completed-todo {
+    color: lightslategray;
+    text-decoration: line-through;
+}
