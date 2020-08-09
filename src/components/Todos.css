@@ -2,3 +2,12 @@
     display: inline-block;
     margin-right: 5px;
 }
+
+.todos-comp .hide-footer {
+    display: none;
+}
+
+
+/* .todos-comp .show-footer {
+    display: block;
+} */

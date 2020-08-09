@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import TodoModel from '../model/TodoModel';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, ButtonGroup, Button } from 'react-bootstrap';
 import './Todos.css'
 import Todo from './Todo';
 
@@ -41,9 +41,16 @@ const Todos = () => {
                     {displayList}                     
                 </Col>                
             </Row>            
-            <Row>
+            <Row className={todoList.length === 0 ? "hide-footer" : ""}>
                 <Col>
                     <p>{numberOfItemsLeft} items left</p>
+                </Col>
+                <Col>
+                <ButtonGroup>
+                    <Button variant="outline-danger">All</Button>
+                    <Button variant="outline-danger">Active</Button>
+                    <Button variant="outline-danger">Completed</Button>
+                </ButtonGroup>
                 </Col>
             </Row>
         </div>
