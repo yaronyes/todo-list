@@ -1,10 +1,7 @@
-label {
-    margin: 0;
+#todo-item {
+    display: inline-block;
+    margin-right: 5px;
 }
-
-/* hr {
-    margin: 0;
-} */
 
 .todo-comp { 
     text-align: left;
@@ -16,10 +13,6 @@ label {
     justify-content: space-between;
     padding: 0;
 }
-
-/* .todo-comp .todo > .btn {
-    border: none;
-} */
 
 .delete-todo {
     color: red;

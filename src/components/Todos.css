@@ -1,18 +1,23 @@
-#todo-item {
-    display: inline-block;
-    margin-right: 5px;
+
+.todo-list {
+    margin: 20px auto 10px auto;
 }
 
 .todos-comp .hide-footer {
     display: none;
 }
 
-
-/* .todos-comp .show-footer {
-    display: block;
-} */
-
-.filters-area > .btn {
-    border: none;
+.filters-area > .btn {    
     color: black;
+    border: none; 
+}
+
+.btn-outline-dark:not(:disabled):not(.disabled).active {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.todos-comp  .footer {
+    justify-content: center;
 }

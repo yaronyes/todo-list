@@ -54,20 +54,20 @@ const Todos = () => {
                 </Col>
             </Row>            
             <Row>
-                <Col md={5}>
+                <Col className="todo-list" md={5}>
                     {displayList}                     
                 </Col>                
             </Row>            
-            <Row className={todoList.length === 0 ? "hide-footer" : ""}>
-                <Col>
+            <Row className={todoList.length === 0 ? "footer hide-footer" : "footer"}>
+                <Col md={3}> 
                     <p>{numberOfItemsLeft} items left</p>
                 </Col>
-                <Col>
-                <ToggleButtonGroup type="radio" name="options"  className="filters-area" value={selectedButton} defaultValue={selectedButton} onChange={applyFilter}>
-                    <ToggleButton variant="outline-danger" value={1}>All</ToggleButton>
-                    <ToggleButton variant="outline-danger" value={2}>Active</ToggleButton>
-                    <ToggleButton variant="outline-danger" value={3}>Completed</ToggleButton>
-                </ToggleButtonGroup>                
+                <Col md={4}>
+                    <ToggleButtonGroup type="radio" name="options"  className="filters-area" value={selectedButton} defaultValue={selectedButton} onChange={applyFilter}>
+                        <ToggleButton variant="outline-dark" value={1} className="temp">All</ToggleButton>
+                        <ToggleButton variant="outline-dark" value={2}>Active</ToggleButton>
+                        <ToggleButton variant="outline-dark" value={3}>Completed</ToggleButton>
+                    </ToggleButtonGroup>                
                 </Col>
             </Row>
         </div>
